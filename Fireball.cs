@@ -1,11 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Fireball : MonoBehaviour
 {
-    void OnBecameInvisible()
+    public float speed = 10f; // Velocidad de la fireball
+
+    void Update()
     {
-        Destroy(gameObject);
+        // Mueve la fireball hacia adelante
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 }
